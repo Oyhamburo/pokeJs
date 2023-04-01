@@ -72,7 +72,7 @@ controller.game = async (req, res) => {
 
 controller.logOutView = async (req, res) => {
     if (!req.session.login) {
-        res.redirect('usuario')
+        res.redirect('login')
     } else {
         req.session.destroy((err) => {
             if (err) {

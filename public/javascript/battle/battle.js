@@ -12,6 +12,7 @@ let combatStateEnemy = false
 let combatState = false
 let captureState = false
 const timeAwait = 250
+const timeLong = 1000
 const arrayCapture = [{ transform: "rotate(0deg)" }, { transform: "rotate(90deg)" }, { transform: "rotate(0deg)" }, { transform: "rotate(-90deg)" }, { transform: "rotate(0deg)" }, { transform: "rotate(90deg)" }, { transform: "rotate(0deg)" }, { transform: "rotate(-90deg)" }, { transform: "rotate(0deg)" },]
 const invetory = document.getElementById('inventory')
 const backBtn = document.querySelector('.inventory__back')
@@ -38,8 +39,6 @@ const changeCaptureState = state => {
     captureState = state
 }
 
-
-
 const atack = () => {
     stopButtons()
     changeCombatStatePlayer(true)
@@ -48,7 +47,7 @@ const atack = () => {
     textMenuBattle()
 }
 
-const capture = async() => {
+const capture = async () => {
 
     let pokeball = await bagObject.pokeball()
 
@@ -122,6 +121,13 @@ const capture = async() => {
 
         }, 900);
 
+    } else {
+        textChatBattle.style.zIndex = '9'
+        let text = `No posees ninguna PokeBall`
+        writeChat(textChatBattle, text)
+        setTimeout(() => {
+            removeTextMenuBattle()
+        }, timeLong);
     }
 }
 
@@ -176,7 +182,7 @@ const moveEnemy = () => {
 const finishBattle = () => {
     textChatBattle.removeEventListener('click', finishBattle, true)
     bagObject.winGold(600)
-    
+
     skipBattle()
 }
 

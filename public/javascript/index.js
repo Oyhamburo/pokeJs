@@ -6,4 +6,3 @@ initConfig()
 getInventory()
 initBag()
 animateTown()
-

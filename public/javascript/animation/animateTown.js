@@ -116,13 +116,17 @@ let animate = async () => {
                     changeNpcDetected(true, boundary.symbol)
                 }
                 if (boundary.symbol == BATTLEZONE) {
-                    if (randomBattle() && stateHealthPokemonInventory()) {
-                        window.cancelAnimationFrame(animationId)
-                        transitionBlackOut()
-                        let init = await initBattle()
-                        if (init) {
-                            changeCombatState(true)
-                            changeAnimation(boundary.symbol)
+                    if (randomBattle()) {
+                        if (stateHealthPokemonInventory()) {
+                            window.cancelAnimationFrame(animationId)
+                            transitionBlackOut()
+                            let init = await initBattle()
+                            if (init) {
+                                changeCombatState(true)
+                                changeAnimation(boundary.symbol)
+                            }
+                        } else {
+                            statePrintDeathPokemon()
                         }
                     }
                 }
@@ -160,13 +164,17 @@ let animate = async () => {
                     changeNpcDetected(true, boundary.symbol)
                 }
                 if (boundary.symbol == BATTLEZONE) {
-                    if (randomBattle() && stateHealthPokemonInventory()) {
-                        window.cancelAnimationFrame(animationId)
-                        transitionBlackOut()
-                        let init = await initBattle()
-                        if (init) {
-                            changeCombatState(true)
-                            changeAnimation(boundary.symbol)
+                    if (randomBattle()) {
+                        if (stateHealthPokemonInventory()) {
+                            window.cancelAnimationFrame(animationId)
+                            transitionBlackOut()
+                            let init = await initBattle()
+                            if (init) {
+                                changeCombatState(true)
+                                changeAnimation(boundary.symbol)
+                            }
+                        } else {
+                            statePrintDeathPokemon()
                         }
                     }
                 }
@@ -204,13 +212,17 @@ let animate = async () => {
                     changeNpcDetected(true, boundary.symbol)
                 }
                 if (boundary.symbol == BATTLEZONE) {
-                    if (randomBattle() && stateHealthPokemonInventory()) {
-                        window.cancelAnimationFrame(animationId)
-                        transitionBlackOut()
-                        let init = await initBattle()
-                        if (init) {
-                            changeCombatState(true)
-                            changeAnimation(boundary.symbol)
+                    if (randomBattle()) {
+                        if (stateHealthPokemonInventory()) {
+                            window.cancelAnimationFrame(animationId)
+                            transitionBlackOut()
+                            let init = await initBattle()
+                            if (init) {
+                                changeCombatState(true)
+                                changeAnimation(boundary.symbol)
+                            }
+                        } else {
+                            statePrintDeathPokemon()
                         }
                     }
                 }
