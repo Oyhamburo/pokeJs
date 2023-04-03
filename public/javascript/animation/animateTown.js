@@ -31,15 +31,7 @@ let animate = async () => {
     foregroundTown.draw()
     //dibujar el perimetro
 
-    // boundariesTow.forEach((boundary) => {
-    //     boundary.draw()
-    //     if (rectangularCollision({
-    //         rectangle1: player,
-    //         rectangle2: boundary
-    //     })) {
-    //         console.log("CollisionBoundary")
-    //     }
-    // })
+
 
     let moving = true
     player.moving = false

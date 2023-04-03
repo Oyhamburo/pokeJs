@@ -1,9 +1,9 @@
-import {createTransport} from 'nodemailer';
+import { createTransport } from 'nodemailer';
 import { logger } from '../../log/log4jsLogger.js';
 import dotenv from 'dotenv';
 const to = "oyhamburo.jeremias@gmail.com" //Mail q recibe
 
-dotenv.config({path: '../../.env' });
+dotenv.config({ path: '../../.env' });
 
 const transporter = createTransport({
     service: "gmail",
@@ -30,7 +30,7 @@ export async function sendGmail(subject, htmlTemplate) {
             subject,
             htmlTemplate
         );
-        
+
         await transporter.sendMail(mailOptions);
         logger.info(`Email sent`)
     } catch (error) {

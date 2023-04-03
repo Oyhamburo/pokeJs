@@ -19,7 +19,7 @@ import {
 
 dotenv.config()
 
-const PORT = process.env.PORT || 8500;
+const PORT = process.env.PORT || 3040;
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:477";
 
 const app = express()

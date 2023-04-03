@@ -4,7 +4,6 @@ const URLMAPS = '../img/maps/'
 const urlFaceset = '../img/asset/faceset/'
 const URLPLAYER = '../img/asset/player/'
 // Api rest
-// const LOCALHOST = 'http://localhost:3040/'
 const LOCALHOST = `${window.location.origin}/`
 const NPCURL = 'api/npc/'
 const USERURL = 'user/'

@@ -6,3 +6,4 @@ initConfig()
 getInventory()
 initBag()
 animateTown()
+// TEST 
