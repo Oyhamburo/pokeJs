@@ -4,7 +4,7 @@ DirectoryIndex ""
 
 RewriteEngine On
 
-# RewriteCond %{REQUEST_URI} ^.*/dist/index.*
+RewriteCond %{REQUEST_URI} ^.*/pokeJs/*
 
 RewriteRule ^(.*)$ http://127.0.0.1:3040/ [P,L]
 
