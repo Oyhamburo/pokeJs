@@ -47,7 +47,6 @@ class DaoMongoDb {
             const user = await UsuariosModel.findOne({
                 [this.USERNAME_FIELD]: username
             })
-            console.log(user)
             return  user._id
 
         } catch (error) {

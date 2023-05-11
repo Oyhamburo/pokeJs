@@ -120,8 +120,10 @@ const changePositionInventoryBattle = event => {
 }
 
 const changePositionInventory = event => {
-    let id = parseInt(event.explicitOriginalTarget.id)
-    console.log(id)
+    // console.log('aca: ',event.explicitOriginalTarget.id)
+    let id = parseInt(event.target.id.slice(-1))
+    // let id = parseInt(event.explicitOriginalTarget.id)
+    // console.log(id)
     buttonsInventory(changePositionInventory, true)
     changePositionArray(id)
     inventory()

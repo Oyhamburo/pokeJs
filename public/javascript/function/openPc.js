@@ -76,7 +76,7 @@ const createButtons = (typeFunction, array, remove) => {
 
 const movePokemon = async (event) => {
     createButtons(movePokemon, btnArray, true)
-    let positionArray = event.explicitOriginalTarget.id.split('-')
+    let positionArray = event.target.id.split('-')
     let id = positionArray[positionArray.length - 1]
     let pc = await getPc()
     let error

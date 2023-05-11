@@ -6,6 +6,7 @@ const Service = UserService.getInstance();
 const controller = {}
 
 controller.logInView = async (req, res) => {
+    console.log(req.session)
     if (req.session.login) {
         res.redirect('game')
     } else {
